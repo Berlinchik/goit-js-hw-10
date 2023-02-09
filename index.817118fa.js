@@ -1,2 +1,0 @@
-(function(o){const e=new URLSearchParams({fields:"name,capital,population,flags,languages"});return fetch(`https://restcountries.com/v3.1/name/${o}?${e}`).then((o=>{if(404===o.status&&console.log("Oops, there is no country with that name"),!o.ok)throw Error("Error!");return o.json()}))})("peru").then((o=>{if(o.length>10)return void console.log("Too many matches found. Please enter a more specific name.");console.log(o[0]);const{name:{official:e},capital:[n],population:t,flags:{svg:a},languages:s}=o[0]})).catch((o=>console.log(o)));
-//# sourceMappingURL=index.817118fa.js.map
