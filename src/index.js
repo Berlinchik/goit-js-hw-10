@@ -10,9 +10,9 @@ const input = document.querySelector('#search-box');
 const DEBOUNCE_DELAY = 300;
 
 function onSearch(e) {
+  countryList.innerHTML = '';
+  countryInfo.innerHTML = '';
   if (e.target.value.trim() === '') {
-    countryList.innerHTML = '';
-    countryInfo.innerHTML = '';
     return;
   }
   fetchCountries(e.target.value.trim())
